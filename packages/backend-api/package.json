@@ -1,0 +1,13 @@
+{
+  "name": "backend-api",
+  "main": "./src/index.ts",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "backend": "workspace:../../apps/backend"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module"
+}

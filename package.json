@@ -1,0 +1,19 @@
+{
+  "name": "bunmonorepo",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^8.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"bun dev:backend\" \"bun dev:web\" ",
+    "dev:backend": "cd apps/backend && bun dev",
+    "dev:web": "cd apps/web && bun dev",
+    "clean":"rm -f bun.lockb"
+  },
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"]
+}
